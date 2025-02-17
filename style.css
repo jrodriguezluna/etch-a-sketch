@@ -1,0 +1,124 @@
+
+body {
+  background-color: #282828;
+  height: 100vh;
+  margin: 0px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex: auto;
+  justify-content: center; 
+  align-items: center;
+  gap: 5%
+}
+
+.content__sketch-column {
+ display: flex;
+ flex-direction: column;
+}
+
+.border {
+  border: solid #af3a03;
+  border-width: 0px 50px;
+  background-color: #af3a03;
+  min-width: 600px;
+  min-height: 480px;
+  display: flex;
+  flex-grow: 1;
+}
+
+.border__img {
+  max-width: 100%;
+  max-height: auto;
+  padding: 0;
+}
+
+.border__grid {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  border: 5px solid #a89984;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  cursor: none;
+  
+}
+
+.grid__row{
+  background-color: #a89984;
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.row__element {
+  background-color: #a89984;
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.content__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 280px;
+  height: 100%;
+  background-color: #3c3836;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.column__title {
+  font-family:  "Courier New", Roboto, "Brush Script MT", "Lucida Handwriting";
+  font-size: 28px;
+  flex-shrink: 0;
+  width: 100%;
+  font-style: italic;
+  font-weight: 450;
+  text-align: center;
+  color: #d5c4a1;
+  padding: 5px 0px;
+  background-color: #076678;
+  margin-bottom: 5%;
+  border-radius: 5px;
+
+}
+
+.column__cat-img {
+  height: auto;
+  width: 100%;  
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 0px;
+  padding: 10px 0px;
+  border: 0px;
+  margin-top: 5%;
+  border-radius: 3px;
+  background-color: #d5c4a1;
+  text-align: center;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0px;
+  border-width: 0px;
+  background-color: #b57614;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+button:hover {
+  background-color: #b57714b8; /* Darker shade on hover */
+  box-shadow: 2px 2px 0 #b57714b8; /* Adjusted shadow */
+  color: #d5c4a1;
+}
