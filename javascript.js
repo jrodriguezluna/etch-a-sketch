@@ -1,5 +1,5 @@
 
-let numGridWidth = 100;
+let numGridWidth = 75;
 
 function createGrid(gridWidth) {
   numPreviousGridWidth = gridWidth
@@ -35,7 +35,7 @@ objButtonShake.addEventListener("click", () => {
 
   if (strInputValue) {
     let numNewGridWidth = Number(strInputValue)
-    if (numNewGridWidth >= 10 && numNewGridWidth <= 150) {
+    if (numNewGridWidth >= 10 && numNewGridWidth <= 100) {
       numGridWidth = numNewGridWidth
     }
   }
@@ -45,7 +45,7 @@ objButtonShake.addEventListener("click", () => {
 
 /////////////////////////////////////////////////////////////////
 
-let objDivGrid = createGrid(100);
+let objDivGrid = createGrid(numGridWidth);
 
 
 

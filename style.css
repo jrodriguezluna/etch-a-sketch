@@ -59,6 +59,7 @@ body {
   background-color: #a89984;
   flex: 1 1 auto;
   display: flex;
+  border: 1px solid;
 }
 
 .content__column {
