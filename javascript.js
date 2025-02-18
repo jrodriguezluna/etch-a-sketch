@@ -1,6 +1,20 @@
 
 let numGridWidth = 75;
 
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+function getRandomHexColor() {
+  
+  let randomHex = ""
+  for (let i = 0; i < 6; i++) {
+    let numArbitrary = getRandomArbitrary(0, 15)
+    randomHex += numArbitrary.toString(16)
+  }
+  return randomHex
+}
+
 function createGrid(gridWidth) {
   numPreviousGridWidth = gridWidth
   let gridHeight = Math.round(gridWidth * 0.8)
@@ -16,7 +30,17 @@ function createGrid(gridWidth) {
       const objDiv= document.createElement("div");
       objDiv.setAttribute("class", "row__element")
       objDiv.addEventListener("mouseover", () => {
-        objDiv.style.backgroundColor = "#4F5151";
+        if (objCheckboxRandom.checked) {
+          objDiv.style.backgroundColor = `#${getRandomHexColor()}`;
+        }
+        else {
+          objDiv.style.backgroundColor = "#4F5151";
+        }
+        
+        if (objCheckboxGradient.checked) {
+          let newGradient = Number(objDiv.style.opacity) + 0.1;
+          objDiv.style.opacity = newGradient;
+        }
       })
       objDivRow.appendChild(objDiv);
     }
@@ -27,7 +51,9 @@ function createGrid(gridWidth) {
 }
 
 const objButtonShake = document.querySelector("button")
-const objInput = document.querySelector("input") 
+const objInput = document.querySelector("input")
+const objCheckboxRandom = document.querySelector(".randomCheckbox")
+const objCheckboxGradient = document.querySelector(".gradientCheckbox")
 objButtonShake.addEventListener("click", () => {
   objDivGrid.remove()
   strInputValue = objInput.value;
