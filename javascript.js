@@ -52,6 +52,7 @@ function createGrid(gridWidth) {
 
 const objButtonShake = document.querySelector("button")
 const objInput = document.querySelector("input")
+const objContentSketch = document.querySelector(".content__sketch-column")
 const objCheckboxRandom = document.querySelector(".randomCheckbox")
 const objCheckboxGradient = document.querySelector(".gradientCheckbox")
 objButtonShake.addEventListener("click", () => {
@@ -66,16 +67,12 @@ objButtonShake.addEventListener("click", () => {
     }
   }
   objDivGrid = createGrid(numGridWidth)
-
+  objContentSketch.classList.toggle("shake")
+  setTimeout(() => {
+    objContentSketch.classList.toggle("shake")
+  }, 500);
 })
 
 /////////////////////////////////////////////////////////////////
 
 let objDivGrid = createGrid(numGridWidth);
-
-
-
-
-
-
-
